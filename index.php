@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <!--Title should be small-->
   <title>Food King -The King of catering </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -63,6 +64,7 @@
               <li><a href="#">Chennail</a></li>
               <li><a href="#">Kanakumari</a></li>
               <li><a href="#">Ladak</a></li>
+              <!--li-->MORE cites Required<!--/li-->
               
             </ul>
           </li>
