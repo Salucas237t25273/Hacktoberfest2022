@@ -29,7 +29,7 @@
 
     <br>
     <br>
-<h1>ACCOUNT ALREADY EXITS</h1>
+<h1>ACCOUNT ALREADY EXITS</h1>//display if the account already exit in the database.
 
 
 </body>
