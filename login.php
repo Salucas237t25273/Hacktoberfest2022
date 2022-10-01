@@ -66,14 +66,14 @@
            
               
               // Connecting to the Database
-              $servername = "localhost";
-              $username = "root";
+              $servername = "localhost";//local host is the server that is centralized to the client use
+              $username = "root";//admin uername
               $password = "";
-              $database = "pk";
+              $database = "pk";//database name
 
         
               // Create a connection
-              $conn = mysqli_connect($servername, $username, $password, $database);
+              $conn = mysqli_connect($servername, $username, $password, $database);//connection
               // Die if connection was not successful
             if(!$conn){
                 die("Sorry we failed to connect: ". mysqli_connect_error());//testing for connecting mysql
@@ -81,26 +81,26 @@
            
             else{ 
                
-
+//checking password matched or not
             if(($apassword == $cpassword)&& $exists==false){
                
               
               // Submit these to a database
               // Sql query to be executed 
               
-              $sql_e = "SELECT `id` FROM `doctorlogin` WHERE id='$id'";
-              $res_e = mysqli_query($conn, $sql_e);
-              if(mysqli_num_rows($res_e) > 0){
+              $sql_e = "SELECT `id` FROM `doctorlogin` WHERE id='$id'";//selecting query from the database
+              $res_e = mysqli_query($conn, $sql_e);//taking result array format for manupualting in the number of the row
+              if(mysqli_num_rows($res_e) > 0){//if not exit then create new acccount please
                 header("location:accdone.php");	
             }
             else{
                 $sql = "INSERT INTO `doctorlogin`  ( `id`, `pass`, `cpass`) VALUES ( '$id', '$apassword', '$cpassword');";
                 $result = mysqli_query($conn, $sql);
                 if($result){
-                    echo "<h1> PROFILE CREATED ! <h1>";
+                    echo "<h1> PROFILE CREATED ! <h1>"; //or profile created
                     }  
                       else{
-                        header("location:accountnot.php");
+                        header("location:accountnot.php");//else password or username is wrong
                       }
                       }
                      
