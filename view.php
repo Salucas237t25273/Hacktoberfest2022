@@ -21,9 +21,9 @@
        
     $conn = mysqli_connect($host, $user, $password, $db_name);    
 
-    $username = $_POST['id'];  
-    $password = $_POST['pass']; 
-    $password=base64_encode($password);
+    $username = $_POST['id'];  //username should be post id
+    $password = $_POST['pass']; //password passing through the system
+    $password=base64_encode($password);//make the password encrypted
       
         //to prevent from mysqli injection  
         $username = stripcslashes($username);  
